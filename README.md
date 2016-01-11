@@ -35,7 +35,7 @@ mount /home/ -o dev,remount
 ./bootstrap-debian-edison.sh
 mount /home/ -o nodev,remount
 ./setup-chroot-mounts.sh
-chroot /home/root/debian
+chroot /home/root/debian /bin/bash
 ```
 
 Installing and Updating Debian Packages
