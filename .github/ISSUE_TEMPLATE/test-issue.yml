@@ -54,7 +54,7 @@ body:
     attributes:
       label: … I want to …
       description: What does the user want to accomplish?
-      placeholder: Background, Context, and Detail
+      placeholder: Background, Context, and Detail, optionally in list form
     validations:
       required: true
   - type: markdown
