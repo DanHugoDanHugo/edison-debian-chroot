@@ -7,14 +7,14 @@ assignees:
 body:
   - type: markdown
     attributes:
-      value: "# Card"
+      value: |
+        - **Project Manager** responsible for multiple repositories
+        - **Repository Manager** responsible for one or few repositories
+        - **Project Contributor** part of the organization
+        - **External Contributor** not a part of the organization, discovering projects
   - type: markdown
     attributes:
-      value: |
-        - *Project Manager* responsible for multiple repositories
-        - *Repository Manager* responsible for one or few repositories
-        - *Project Contributor* part of the organization
-        - *External Contributor* not a part of the organization, discovering projects
+      value: "# Card"
   - type: dropdown
     id: card
     attributes:
