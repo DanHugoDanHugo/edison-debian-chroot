@@ -10,6 +10,10 @@ body:
       value: |
         The 3 C´s of Agile User Stores, select a user and describe what they would like to accomplish with context,
         addressing questions such as What and Why. Then describe in list form how we know we met those expectations.
+
+        A user story is a description of what to do, a task in a related repository will describe implementation of
+        a particular user story. Multiple tasks in multiple repositories may implement a user story or stories.
+        
   - type: markdown
     attributes:
       value: |
@@ -18,6 +22,7 @@ body:
         - **Repository Manager** responsible for one or few repositories
         - **Project Contributor** part of the organization
         - **External Contributor** not a part of the organization, discovering projects
+        
   - type: markdown
     attributes:
       value: "# Card"
