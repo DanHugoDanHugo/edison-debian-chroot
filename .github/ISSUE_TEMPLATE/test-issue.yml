@@ -8,6 +8,12 @@ body:
   - type: markdown
     attributes:
       value: |
+        The 3 C´s of Agile User Stores, select a user and describe what they would like to accomplish with context,
+        addressing questions such as What and Why. Then describe in list form how we know we met those expectations.
+  - type: markdown
+    attributes:
+      value: |
+        User types for this project
         - **Project Manager** responsible for multiple repositories
         - **Repository Manager** responsible for one or few repositories
         - **Project Contributor** part of the organization
