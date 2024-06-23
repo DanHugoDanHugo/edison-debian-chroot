@@ -12,7 +12,7 @@ body:
     id: card
     attributes:
       label: As a …
-      description: Story for this user type
+      description: Who are we listening to?
       options:
         - Project Manager
         - Repository Manager
@@ -30,7 +30,6 @@ body:
       label: … I want to …
       description: What does the user want to accomplish?
       placeholder: Background, Context, and Detail
-      value: "A bug happened!"
     validations:
       required: true
   - type: markdown
@@ -40,6 +39,8 @@ body:
     id: confirmation
     attributes:
       label: "… so that …"
+      placeholder: A list of confirmable items
       description: How do we determine we met expectations?
-      render: shell
+    validations:
+      required: true
 
