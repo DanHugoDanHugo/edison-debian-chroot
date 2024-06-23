@@ -14,7 +14,7 @@ body:
       label: As a…
       description: Story for this user type
       options:
-	- Project Manager
+        - Project Manager
         - Repository Manager
       default: 0					      
   - type: input
