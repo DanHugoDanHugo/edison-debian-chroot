@@ -7,8 +7,16 @@ assignees:
 body:
   - type: markdown
     attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
+      value: "## Card"
+  - type: dropdown
+    id: user
+    attributes:
+      label: As a…
+      description: Story for this user type
+      options:
+	- Project Manager
+        - Repository Manager
+      default: 0					      
   - type: input
     id: contact
     attributes:
