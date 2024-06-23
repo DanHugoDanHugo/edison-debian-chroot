@@ -39,7 +39,10 @@ body:
     id: confirmation
     attributes:
       label: "… so that …"
-      placeholder: A list of confirmable items
+      placeholder: |
+        " - A list "
+        " - of confirmable "
+        " - items "
       description: How do we determine we met expectations?
     validations:
       required: true
