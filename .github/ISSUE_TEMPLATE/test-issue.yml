@@ -72,4 +72,14 @@ body:
       description: How do we determine we met expectations?
     validations:
       required: true
-
+  - type: markdown
+    attributes:
+      value: "# Notes"
+  - type: textarea
+    id: notes
+    attributes:
+      label: Information about this user story
+      description: Optional meta detail
+      placeholder: Useful information for planning and implementation, etc.
+    validations:
+      required: false
