@@ -78,7 +78,7 @@ body:
   - type: textarea
     id: notes
     attributes:
-      label: Non-story information
+      label: Non-story knowledge
       description: Optional meta detail
       placeholder: Useful information for planning and implementation, etc.
     validations:
