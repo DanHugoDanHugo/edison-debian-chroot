@@ -1,0 +1,103 @@
+# Copyright (C) 2024 Project-ACT
+# 
+# This file is part of ov-tessellation.
+# 
+# ov-tessellation is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# ov-tessellation is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with ov-tessellation.  If not, see <https://www.gnu.org/licenses/>.
+
+name: User Story
+description: Agile User story as a component of project design and planning
+title: "[User Story]: "
+labels: ["story", "triage"]
+assignees:
+  - DanHugoDanHugo
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # The 3 Cs of Agile User Stories
+        
+        1. Select a User Card (imagine index cards, one color per user type).
+        2. Describe in Conversation what this User would like to accomplish, with context, addressing concerns such as What and Why.
+        3. Describe in simple list form (not checkboxes) Confirmation that we met those expectations as Acceptance Criteria.
+
+        A user story is a description of what to do, a task (issue) in a related repository will describe implementation of
+        a particular user story. Multiple tasks in multiple repositories may implement a user story or stories.
+        
+  - type: markdown
+    attributes:
+      value: |
+        User types for this project
+        - **Project Manager** responsible for multiple repositories
+        - **Repository Manager** responsible for one or few repositories
+        - **Project Contributor** part of the organization
+        - **External Contributor** not a part of the organization, discovering projects
+
+  - type: markdown
+    attributes:
+      value: |
+        Please compose Conversation and Confirmation elements in the first person, as though you are the selected User.
+      
+  - type: markdown
+    attributes:
+      value: "# Card"
+  - type: dropdown
+    id: card
+    attributes:
+      label: As a …
+      description: Who are we listening to?
+      options:
+        - Project Manager
+        - Repository Manager
+        - Project Contributor
+        - External Contributor
+      default: 0
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "# Conversation"
+  - type: textarea
+    id: conversation
+    attributes:
+      label: … I want/need to …
+      description: What does the user hope to accomplish?
+      placeholder: Background, Context, and Detail, optionally in list form, the results of discussion and pondering
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "# Confirmation"
+  - type: textarea
+    id: confirmation
+    attributes:
+      label: … so that …
+      placeholder: |
+        - A list
+        - of confirmable items
+        - describing
+        - Acceptance Criteria
+      description: How do we determine whether we met expectations?
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "# Notes"
+  - type: textarea
+    id: notes
+    attributes:
+      label: Non-story knowledge
+      description: Optional meta detail
+      placeholder: Useful information for planning and implementation, etc.
+    validations:
+      required: false

@@ -1,0 +1,45 @@
+# Copyright (C) 2024 Project-ACT
+# 
+# This file is part of ov-tessellation.
+# 
+# ov-tessellation is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# ov-tessellation is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with ov-tessellation.  If not, see <https://www.gnu.org/licenses/>.
+
+name: Feature
+description: Agile Feature for project design and planning, a top-level grouping of User Stories
+title: "[Feature]: "
+labels: ["feature", "triage"]
+assignees:
+  - DanHugoDanHugo
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Agile Feature
+        
+        An Feature is a general, yet focused description of some aspect of a project, detailed
+        at a more granular level as a collection of one or more related User Stories.
+
+  - type: markdown
+    attributes:
+      value: |
+        # Description
+        
+  - type: textarea
+    id: description
+    attributes:
+      label: … I want/need to …
+      description: What does the user hope to accomplish?
+      placeholder: Background, Context, and Detail, optionally in list form, the results of discussion and pondering
+    validations:
+      required: true
