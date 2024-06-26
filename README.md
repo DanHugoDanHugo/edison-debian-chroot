@@ -1,6 +1,8 @@
 Debian Unstable Chroot on Intel Edison
 ======================================
 
+Edison was EOL this repo is now used for gitub testing…
+
 Based initially on the same-named pair of scripts from
 https://communities.intel.com/message/254727#254727
 
