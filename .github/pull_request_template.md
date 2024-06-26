@@ -8,11 +8,11 @@
 - [ ] Build System update
 - [ ] Dependency Update
 
-## Description
+## General Description
 
 
 
-## Related Tickets & Documents
+## Related Issues
 
 For pull requests which relate to or close an issue, please include them below.
 We like to follow [Github's guidance on linking issues to pull requests](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue).
@@ -21,9 +21,9 @@ For example having the text: "closes #1234" would connect the current pull
 request to issue 1234.  And when we merge the pull request, Github will
 automatically close the issue.
 
-### Related Issue(s)
+### Issue Reference(s)
 
-### Closes Issue(s)
+
 
 ## Added/updated tests?
 
@@ -36,5 +36,5 @@ automatically close the issue.
 
 ## Tests run and pass
 
-- [ ] I have run exisitng tests and they pass
+- [ ] I have run existing tests and they pass
 - [ ] I have added additional tests and they pass
