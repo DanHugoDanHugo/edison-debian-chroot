@@ -65,5 +65,6 @@ body:
         - Verification/Certification tools
         - Similar features in other projects/platforms
         - Any other resource to aid in implementation of User Stories attached to this Feature
+
     validations:
       required: true
