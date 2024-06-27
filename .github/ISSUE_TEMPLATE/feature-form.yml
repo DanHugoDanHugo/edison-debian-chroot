@@ -19,6 +19,7 @@ name: Feature
 description: Agile Feature for project design and planning, a top-level grouping of User Stories
 title: "[Feature]: "
 labels: ["feature", "triage"]
+projects: ["project-act/2"]
 assignees:
   - DanHugoDanHugo
 body:
@@ -27,8 +28,11 @@ body:
       value: |
         # Agile Feature
         
-        An Feature is a general, yet focused description of some aspect of a project, detailed
-        at a more granular level as a collection of one or more related User Stories.
+        A Feature is a general, yet focused description of some aspect of a project to implemented
+        during an Epic, detailed at a more granular level as a collection of one or more related User Stories.
+
+        A Feature may also indicate an implementation requirement that can be further detailed with User Stories, 
+        for example an OpenAPI implementation, 
 
   - type: markdown
     attributes:
@@ -38,8 +42,28 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: … I want/need to …
-      description: What does the user hope to accomplish?
-      placeholder: Background, Context, and Detail, optionally in list form, the results of discussion and pondering
+      label: A general description of some behavior, interface, experience, etc.
+      description: To be described further with one or more User Stories…
+      placeholder: A Feature might be an adjustable perpetual calendar, grouping User Stories about month and year flipping, etc.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        # References
+        
+  - type: textarea
+    id: references
+    attributes:
+      label: External specs documentation, RFCs, accepted standards, examples, etc
+      description: To be described further with one or more User Stories…
+      placeholder: |
+        A list of references and/or links for
+        - Standard API Specifications
+        - Accessibility Standards
+        - Verification/Certification tools
+        - Similar features in other projects/platforms
+        - Any other resource to aid in implementation of User Stories attached to this Feature
     validations:
       required: true
