@@ -33,7 +33,9 @@ body:
 
         A user story is a description of what to do, a task (issue) in a related repository will describe implementation of
         a particular user story. Multiple tasks in multiple repositories may implement a user story or stories.
-        
+
+# This displayed list of User types should match the dropdown list below
+# Edit to match Agile User types for this project
   - type: markdown
     attributes:
       value: |
@@ -57,6 +59,7 @@ body:
     attributes:
       label: As a …
       description: Who are we listening to?
+# Options in this dropdown list should match the display list of User types above
       options:
         - Project Manager
         - Repository Manager
