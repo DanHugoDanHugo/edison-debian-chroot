@@ -96,6 +96,20 @@ body:
       required: true
   - type: markdown
     attributes:
+      value: "# Linked to Feature(s)"
+  - type: textarea
+    id: tracked-by
+    attributes:
+      label: Tracked by…
+      description: Features are made of Stories
+      placeholder: |
+        - [ ] A task list of Feature(s) tracking this User Story
+
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
       value: "# Notes"
   - type: textarea
     id: notes
