@@ -1,7 +1,7 @@
 ## What type of PR is this? (check all applicable)
 
-[Refactor A](?expand=1&template=pull_request_template_a.md)
-[Bugfix B](?expand=1&template=pull_request_template_b.md)
+- [Refactor A](?template=pull_request_template_a.md)
+- [Bugfix B](?expand=1&template=pull_request_template_b.md)
 
 
 ## General Description
