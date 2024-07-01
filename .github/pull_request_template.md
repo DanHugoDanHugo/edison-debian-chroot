@@ -1,6 +1,8 @@
-## What type of PR is this? (check all applicable)
+# Switch to PREVIEW mode
 
-- [Refactor A](?template=pull_request_template_a.md)
+## What type of PR is this?
+
+- [Refactor A](?expand=1&template=pull_request_template_a.md)
 - [Bugfix B](?expand=1&template=pull_request_template_b.md)
 
 
