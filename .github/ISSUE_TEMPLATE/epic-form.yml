@@ -27,23 +27,106 @@ body:
       value: |
         # Agile Epic
         
-        An Epic is a collection of related Features and User Stories which combine to form a
-        level of functionality within a larger project unit, usually called a Theme
-        (sometimes called an Initiative).
+        An Epic is a collection of related Features which combine to form a
+        level of functionality within a larger project unit, here called a Theme
+        (also called an Initiative by some).
+
+        We can express an Epic directly as an Objective and Key Results (OKRs).
 
   - type: markdown
     attributes:
-      value: |
-        # Description
+      value: "# Objective"
         
   - type: textarea
-    id: description
+    id: objective
     attributes:
-      label: A focused phase of an over-arching Theme timeline
-      description: 
-      placeholder: A Summary of what might be accomplished in this phase of the project Theme timeline
+      label: The Objective of this Epic, We aim to…
+      description: A focused goal for this phase of the timeline
+      placeholder: A brief description of what we aim to accomplished in this phase of the project Theme timeline
     validations:
       required: true
 
-
+  - type: markdown
+    attributes:
+      value: "# Key Results"
         
+  - type: textarea
+    id: success
+    attributes:
+      label: Key Results measuring Objective outcome…
+      description: A list of Key Results indicating success
+      placeholder: |
+        - [ ] A list of one or more measurable
+        - [ ] and demonstrably-achieved
+        - [ ] successes
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "# Linked to Theme(s)"
+
+  - type: textarea
+    id: tracked-by
+    attributes:
+      label: Tracked by…
+      description: Themes are made of Epics
+      placeholder: |
+        - [ ] A task list of Theme(s) tracking this Epic
+
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: "# Linked Feature(s)"
+
+  - type: textarea
+    id: tracking
+    attributes:
+      label: Tracking…
+      description: Epics are made of Features
+      placeholder: |
+        - [ ] A task list of Features tracked by this Epic
+
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: "# References"
+        
+  - type: textarea
+    id: references
+    attributes:
+      label: Links to external specs, documents, RFCs, accepted standards, examples, etc
+      description: Place useful information close for implementors to find…
+      placeholder: |
+        - Links to resources to aid in implementation of Features attached to this Epic
+        - to External API Specifications, Accessibility Standards
+        - to Verification/Certification tools
+        - to Similar features in other projects/platforms
+
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: "# Wrap Up"
+
+  - type: textarea
+    id: wrapup
+    attributes:
+      label: Post-Epic comments, observations, notes
+      description: To aid in iterative process improvement and learning
+      placeholder: |
+        Anything that may contribute to the next Epics and other project effort.
+
+    validations:
+      required: false
+
+  - type: markdown
+    attributes: 
+      value: |
+        ## Helpful Issue-filing Links
+        - [Linking to Issues and PRs across Repositories](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls#issues-and-pull-requests)
