@@ -35,7 +35,7 @@ body:
 
   - type: markdown
     attributes:
-      value: "# Objective"
+      value: "# Epic Objective"
         
   - type: textarea
     id: objective
@@ -51,43 +51,51 @@ body:
       value: "# Key Results"
         
   - type: textarea
-    id: success
+    id: keyresults
     attributes:
       label: Key Results measuring Objective outcome…
       description: A list of Key Results indicating success
       placeholder: |
         - [ ] A list of one or more measurable
-        - [ ] and demonstrably-achieved
-        - [ ] successes
+        - [ ] and demonstrably-achieved results
+        - [ ] Check off during Wrap-Up
     validations:
       required: true
 
   - type: markdown
     attributes:
-      value: "# Linked to Theme(s)"
-
-  - type: textarea
-    id: tracked-by
-    attributes:
-      label: Tracked by…
-      description: Themes are made of Epics
-      placeholder: |
-        - [ ] A task list of Theme(s) tracking this Epic
-
-    validations:
-      required: false
+      value: "# Intra-Overview Linked Issue(s)"
 
   - type: markdown
     attributes:
-      value: "# Linked Feature(s)"
+      value: |
+        Issues should be linked by url (see info for issue linking bottom of page) for a
+        variety of reasons, with tags in a task list indicating the link relationship.
+        Identifying relationships between issues within the initiative hierarchy should
+        be easier than without this information.
+
+        Tags and Linked Issues
+        - theme: -> the parent Theme in this Agile hierarchy for this Epic
+        - feature: -> a child Feature in this Agile hierarchy for this Epic
+        - merge-to: -> an Epic that is a merging of this and other Epic(s)
+        - merge-from: -> an Epic that was merged into this Epic
+        - split-to: -> an Epic that is one of multiple Themes derived from this Epic
+        - split-from: -> an Epic that was split into this and other Epics
+        - spike-to: -> a virtual Epic for planning and estimation of related Epics
+        - spoke-from: --> a real Epic connected to a virtual spike Epic
+
+        Merge-to and Split-to Epic issues should be closed in favor of the consolidated or expanded
+        Epic issues, as appropriate. Do not delete them, mark as merge or split and closed.
 
   - type: textarea
     id: tracking
     attributes:
-      label: Tracking…
-      description: Epics are made of Features
+      label: Issues linked within the Project Overview Repository to this Theme issue
+      description: "Tag entries with epic: , feature:, story:, merge-to:, split-from:, etc"
       placeholder: |
-        - [ ] A task list of Features tracked by this Epic
+        - [ ] theme: issue link within overview
+        - [ ] merge-to: this issue merges into a new issue
+        - [ ] split-from: this issue is one refactor from a parent Epic issue
 
     validations:
       required: false
@@ -112,7 +120,7 @@ body:
 
   - type: markdown
     attributes:
-      value: "# Wrap Up"
+      value: "# Wrap-Up"
 
   - type: textarea
     id: wrapup
