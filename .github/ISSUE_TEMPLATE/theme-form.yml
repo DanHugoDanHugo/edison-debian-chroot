@@ -20,7 +20,7 @@ description: Agile Theme for project design and planning, a top-level grouping o
 title: "[Theme]: Edit title after colon"
 labels: ["theme", "triage"]
 projects:
-  - DanHugoDanHugo/projects/2
+  - DanHugoDanHugo/2
 assignees:
   - DanHugoDanHugo
 body:
