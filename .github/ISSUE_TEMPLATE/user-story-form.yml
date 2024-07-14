@@ -19,32 +19,42 @@ name: User Story
 description: Agile User story as a component of project design and planning
 title: "[User Story]: Edit title after colon"
 labels: ["story", "triage"]
+projects: ["project-act/2"]
 assignees:
   - DanHugoDanHugo
 body:
   - type: markdown
     attributes:
       value: |
-        # The 3 Cs of Agile User Stories
+        # Agile User Story and the 3 Cs
         
         1. Select a User Card (imagine index cards, one color per user type).
         2. Describe in Conversation what this User would like to accomplish, with context, addressing concerns such as What and Why.
         3. Describe in simple list form (not checkboxes) Confirmation that we met those expectations as Acceptance Criteria.
 
-        A user story is a description of what to do, a task (issue) in a related repository will describe implementation of
-        a particular user story. Multiple tasks in multiple repositories may implement a user story or stories.
+        A user story is a description of what to do in somewhat abstract form, a task (issue) in a *related repository* will describe
+        implementation of a particular User Story including Confirmation checks, which are essentially concrete **Key Results**.
+        
+        Multiple tasks in multiple repositories may implement a User Story or Stories.
 
 # This displayed list of User types should match the dropdown list below
-# Edit to match Agile User types for this project
+# Edit to match Agile User types for this project       
   - type: markdown
     attributes:
       value: |
         User types *for this project*:
-        - **Project Manager** responsible for multiple repositories
-        - **Repository Manager** responsible for one or few repositories
-        - **Project Contributor** part of the organization
-        - **External Contributor** not a part of the organization, discovering projects
-
+        - **Organization Maintainer** responsible for a cohort of one or more people
+        - **Organization Member** is anyone considered to be a part of an organization
+        - **Project Maintainer** responsible for managing project(s)
+        - **Project Contributor** a person who is part of an organization contributing to project(s)
+        - **External Contributor** a person discovering projects
+        - **Casual User** a curious person checking stuff out
+        - **Automated User** a spider or other bot or similar
+        - **Catalog Maintainer** oversees the gathered data from remote orgs and projects
+        - **Spider Maintainer** oversees operation of the automation of gathering data from orgs and projects
+        - **Visualization Maintainer** integrates graph visualizations into other platform(s)
+        - **Notification Maintainer** manages integration of notifications with messaging tools and channels
+        - **Tessellation Contributor** works on Tessellation components in any capacity
 
   - type: markdown
     attributes:
@@ -54,6 +64,7 @@ body:
   - type: markdown
     attributes:
       value: "# Card"
+
   - type: dropdown
     id: card
     attributes:
@@ -61,27 +72,39 @@ body:
       description: Who are we listening to?
 # Options in this dropdown list should match the display list of User types above
       options:
-        - Project Manager
-        - Repository Manager
+        - Organization Maintainer
+        - Organization Member
+        - Project Maintainer
         - Project Contributor
         - External Contributor
+        - Casual User
+        - Automated User
+        - Catalog Maintainer
+        - Spider Maintainer
+        - Visualization Maintainer
+        - Notification Maintainer
+        - Tessellation Contributor
       default: 0
     validations:
       required: true
+  
   - type: markdown
     attributes:
       value: "# Conversation"
+
   - type: textarea
     id: conversation
     attributes:
       label: … I want/need to …
-      description: What does the user hope to accomplish?
-      placeholder: Background, Context, and Detail, optionally in list form, the results of discussion and pondering
+      description: What does the user hope to accomplish from their perspective?
+      placeholder: Background, Context, and Detail, optionally in list form, the results of discussion and pondering…
     validations:
       required: true
+
   - type: markdown
     attributes:
       value: "# Confirmation"
+
   - type: textarea
     id: confirmation
     attributes:
@@ -89,21 +112,65 @@ body:
       placeholder: |
         - A list
         - of confirmable items
-        - describing
-        - Acceptance Criteria
-      description: How do we determine whether we met expectations?
+        - describing Acceptance Criteria
+        - for this story
+      description: How do we determine whether we met User expectations?
     validations:
       required: true
+
   - type: markdown
     attributes:
-      value: "# Linked to Feature(s)"
-  - type: textarea
-    id: tracked-by
+      value: "# Intra-Overview and Implementation Repository Linked Issue(s)"
+
+  - type: markdown
     attributes:
-      label: Tracked by…
-      description: Features are made of Stories
+      value: |
+        Issues should be linked by url (see info for issue linking bottom of page) to indicate
+        graph relationship between them, with tags in a task list indicating the link relationship.
+        Identifying relationships between issues within the initiative hierarchy should
+        be easier than without this information.
+
+        Tags and Linked Issues
+        - feature: -> the parent Feature in this Agile hierarchy for this User Story
+        - task: --> Implementation Task located in a separate repository
+        - merge-to: -> a User Story that is a merging of this and other User Stories
+        - merge-from: -> a User Story that was merged into this User Story
+        - split-to: -> a User Story that is one of multiple Themes derived from this User Stories
+        - split-from: -> a User Story that was split into this and other User Stories
+        - spike-to: -> a virtual User Story for planning and estimation of related User Stories
+        - spike-from: --> a real User Story connected to a virtual spike User Story
+
+        Merge-to and Split-to User Story issue(s) should be **Closed as Not Planned** in favor of the
+        consolidated or expanded User Story issue(s), as appropriate. Do not delete, mark as merge
+        or split and **Closed as Not Planned**.
+
+  - type: textarea
+    id: linking
+    attributes:
+      label: Issues linked within the Project Overview Repository to this Theme issue
+      description: "Tag entries with epic: , task: , story: , merge-to: , split-from: , etc"
       placeholder: |
-        - [ ] A task list of Feature(s) tracking this User Story
+        - [ ] epic: issue link within overview
+        - [ ] merge-to: this issue merges into a new issue
+        - [ ] split-from: this issue is one refactor from a parent Theme issue
+
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: "# References"
+        
+  - type: textarea
+    id: references
+    attributes:
+      label: Links to external specs, documents, RFCs, accepted standards, examples, etc
+      description: Place useful information close for implementors to find…
+      placeholder: |
+        - Links to resources to aid in implementation of this User Story
+        - to External API Specifications, Accessibility Standards
+        - to Verification/Certification tools
+        - to Similar features in other projects/platforms
 
     validations:
       required: false
@@ -111,12 +178,28 @@ body:
   - type: markdown
     attributes:
       value: "# Notes"
+
   - type: textarea
     id: notes
     attributes:
-      label: Non-story knowledge
+      label: Non-story knowledge and insight
       description: Optional meta detail
       placeholder: Useful information for planning and implementation, etc.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: "# Wrap-Up"
+
+  - type: textarea
+    id: wrapup
+    attributes:
+      label: Post-Story comments, observations, notes
+      description: To aid in iterative process improvement and learning
+      placeholder: |
+        Anything that may contribute to other User Stories and other project effort.
+
     validations:
       required: false
 
@@ -125,4 +208,3 @@ body:
       value: |
         ## Helpful Issue-filing Links
         - [Linking to Issues and PRs across Repositories](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls#issues-and-pull-requests)
-        
