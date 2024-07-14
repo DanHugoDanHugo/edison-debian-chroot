@@ -17,8 +17,9 @@
 
 name: Theme
 description: Agile Theme for project design and planning, a top-level grouping of Epics
-title: "[Theme]: "
+title: "[Theme]: Edit title after colon"
 labels: ["theme", "triage"]
+projects: ["project-act/2"]
 assignees:
   - DanHugoDanHugo
 body:
@@ -26,21 +27,118 @@ body:
     attributes:
       value: |
         # Agile Theme
+
+        A Theme is an over-arching description of a major phase of development of an Initiative,
+        made up of Epics which combine to reach the desired level of functionality.
         
-        A Theme describes a top-level view of what a project will accomplish, defining
-        the goals of a phase of development, detailed in related Epics, Features, and
-        User Stories.
+        One or more Epics will form the base for an Agile Iteration. 
+
+        We can describe a Theme directly as an **Objective** and **Key Results** (OKRs).
+
+
+  - type: markdown
+    attributes:
+      value: "# Theme Objective"
+        
+  - type: textarea
+    id: objective
+    attributes:
+      label: The Objective of this Theme, We aim to…
+      description: Goals we hope to accomplish with this broadly-defined project element
+      placeholder: A brief overview of what we aim to accomplished with this project component
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "# Key Results"
+        
+  - type: textarea
+    id: keyresults
+    attributes:
+      label: Key Results measuring Objective outcome…
+      description: A list of Key Results indicating success
+      placeholder: |
+        - [ ] A list of one or more measurable
+        - [ ] and demonstrably-achieved results
+        - [ ] Check off during Wrap-Up
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "# Intra-Overview Linked Issue(s)"
 
   - type: markdown
     attributes:
       value: |
-        # Theme Description
+        Issues should be linked by url (see info for issue linking bottom of page) to indicate
+        graph relationship between them, with tags in a task list indicating the link relationship.
+        Identifying relationships between issues within the initiative hierarchy should
+        be easier than without this information.
+
+        Tags and Linked Issues
+        - epic: -> an Epic in this Agile hierarchy
+        - merge-to: -> a Theme that is a merging of this and other Theme(s)
+        - merge-from: -> a Theme that was merged into this Theme
+        - split-to: -> a Theme that is one of multiple Themes derived from this Theme
+        - split-from: -> a Theme that was split into this and other Themes
+        - spike-to: -> a virtual Theme for planning and estimation of related Themes
+        - spike-from: --> a real Theme connected to a virtual spike Theme
+
+        Merge-to and Split-to Theme issue(s) should be **Closed as Not Planned** in favor of the
+        consolidated or expanded Theme issue(s), as appropriate. Do not delete, mark as merge
+        or split and **Closed as Not Planned**.
+
+  - type: textarea
+    id: linking
+    attributes:
+      label: Issues linked within the Project Overview Repository to this Theme issue
+      description: "Tag entries with theme: , epic: , story: , merge-to: , split-from: , etc"
+      placeholder: |
+        - [ ] epic: issue link within overview
+        - [ ] merge-to: this issue merges into a new issue
+        - [ ] split-from: this issue is one refactor from a parent Theme issue
+
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: "# References"
         
   - type: textarea
-    id: description
+    id: references
     attributes:
-      label: Project Mission Statement
-      description: What we hope to accomplish during this phase of development
-      placeholder: A problem to address, a gap to fill, a need to satisfy…
+      label: Links to external specs, documents, RFCs, accepted standards, examples, etc
+      description: Place useful information close for implementors to find…
+      placeholder: |
+        - Links to resources to aid in implementation of Epics attached to this Theme
+        - to External API Specifications, Accessibility Standards
+        - to Verification/Certification tools
+        - to Similar features in other projects/platforms
+
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: "# Wrap-Up"
+
+  - type: textarea
+    id: wrapup
+    attributes:
+      label: Post-Theme comments, observations, notes
+      description: To aid in iterative process improvement and learning
+      placeholder: |
+        Anything that may contribute to ongoing success of this Theme or other parts of the project effort.
+
+    validations:
+      required: false
+
+  - type: markdown
+    attributes: 
+      value: |
+        ## Helpful Issue-filing Links
+        - [Linking to Issues and PRs across Repositories](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls#issues-and-pull-requests)
+
