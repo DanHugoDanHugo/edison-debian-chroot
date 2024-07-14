@@ -17,7 +17,7 @@
 
 name: Feature
 description: Agile Feature for project design and planning, a top-level grouping of User Stories
-title: "[Feature]: "
+title: "[Feature]: Edit title after colon"
 labels: ["feature", "triage"]
 projects: ["project-act/2"]
 assignees:
@@ -27,37 +27,91 @@ body:
     attributes:
       value: |
         # Agile Feature
-        
-        A Feature is a general, yet focused description of some aspect of a project to implemented
-        during an Epic, detailed at a more granular level as a collection of one or more related User Stories.
 
-        A Feature may also indicate an implementation requirement that can be further detailed with User Stories, 
-        for example an OpenAPI implementation, 
+        A **Feature** is a generalized behavior, experience, or expectation from a component of the Initiative.
+        
+        One or more User Stories will describe variations, subtleties, and specific considerations of a Feature,
+        including potentially-required use of specific standard protocols, file formats, interfaces, and so on.
+
+        We can describe a Feature directly as an **Objective** with measurable **Key Results** (OKRs).
 
   - type: markdown
     attributes:
-      value: |
-        # Description
+      value: "# Feature Objective"
         
   - type: textarea
-    id: description
+    id: objective
     attributes:
       label: A general description of some behavior, interface, experience, etc.
-      description: To be described further with one or more User Stories…
-      placeholder: A Feature might be an adjustable perpetual calendar, grouping User Stories about month and year flipping, etc.
+      description: To be described in specific detail with one or more User Stories…
+      placeholder: A Feature might be an adjustable perpetual calendar, grouping more specific User Stories about month and year flipping, etc.
     validations:
       required: true
 
   - type: markdown
     attributes:
+      value: "# Key Results"
+        
+  - type: textarea
+    id: keyresults
+    attributes:
+      label: How we know we achieved Working Feature
+      description: A container holding a group of goals…
+      placeholder: |
+        - [ ] A list of one or more measurable
+        - [ ] and demonstrably-achieved results
+        - [ ] Check off during Wrap-Up
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "# Intra-Overview Linked Issue(s)"
+
+  - type: markdown
+    attributes:
       value: |
-        # References
+        Issues should be linked by url (see info for issue linking bottom of page) to indicate
+        graph relationship between them, with tags in a task list indicating the link relationship.
+        Identifying relationships between issues within the initiative hierarchy should
+        be easier than without this information.
+
+        Tags and Linked Issues
+        - epic: -> a parent Epic in this Agile hierarchy for this Feature
+        - story: -> a child User Story in this Agile Hierarchy for this Feature
+        - merge-to: -> a Feature that is a merging of this and other Feature(s)
+        - merge-from: -> a Feature that was merged into this Features
+        - split-to: -> a Feature that is one of multiple Themes derived from this Features
+        - split-from: -> a Feature that was split into this and other Features
+        - spike-to: -> a virtual Feature for planning and estimation of related Features
+        - spike-from: --> a real Theme connected to a virtual spike Theme
+
+        Merge-to and Split-to Feature issue(s) should be **Closed as Not Planned** in favor of the
+        consolidated or expanded Feature issue(s), as appropriate. Do not delete, mark as merge
+        or split and **Closed as Not Planned**.
+
+  - type: textarea
+    id: linking
+    attributes:
+      label: Issues linked within the Project Overview Repository to this Theme issue
+      description: "Tag entries with eg epic: , story: , merge-to: , split-from: , etc"
+      placeholder: |
+        - [ ] epic: issue link within overview
+        - [ ] merge-to: this issue merges into a new issue
+        - [ ] split-from: this issue is one refactor from a parent Theme issue
+
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: "# References"
         
   - type: textarea
     id: references
     attributes:
-      label: External specs documentation, RFCs, accepted standards, examples, etc
-      description: To be described further with one or more User Stories…
+      label: Links to external specs, documents, RFCs, accepted standards, examples, etc
+      description: Place useful information close for implementors to find…
       placeholder: |
         - Links to resources to aid in implementation of User Stories attached to this Feature
         - to External API Specifications, Accessibility Standards
@@ -65,4 +119,25 @@ body:
         - to Similar features in other projects/platforms
 
     validations:
-      required: true
+      required: false
+
+  - type: markdown
+    attributes:
+      value: "# Wrap-Up"
+
+  - type: textarea
+    id: wrapup
+    attributes:
+      label: Post-Feature comments, observations, notes
+      description: To aid in iterative process improvement and learning
+      placeholder: |
+        Anything that may contribute to other Features and other project effort.
+
+    validations:
+      required: false
+
+  - type: markdown
+    attributes: 
+      value: |
+        ## Helpful Issue-filing Links
+        - [Linking to Issues and PRs across Repositories](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls#issues-and-pull-requests)
