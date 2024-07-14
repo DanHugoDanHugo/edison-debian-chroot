@@ -19,7 +19,7 @@ name: Epic
 description: Agile Epic for project design and planning, a top-level grouping of Features and User Stories
 title: "[Epic]: Edit title after colon"
 labels: ["epic", "triage"]
-projects: ["project-act/2"]
+projects: ["danhugodanhugo/2"]
 assignees:
   - DanHugoDanHugo
 body:
