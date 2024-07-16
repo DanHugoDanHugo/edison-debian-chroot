@@ -5,6 +5,18 @@ labels: ["story"]
 assignees:
   - DanHugoDanHugo
 body:
+  - type: checkboxes
+    id: reporter
+    attributes:
+      label: Reporter Contact and Attribution
+      description: Select and update all that apply
+      options:
+        - label: Contact Information Available 
+        - label: Contact Information Redacted For Privacy
+        - label: Contact Reporter with Status Updates
+        - label: Attribution Information Available
+        - label: Attribute Contribution(s) to Reporter
+
   - type: markdown
     attributes:
       value: |
