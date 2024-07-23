@@ -45,12 +45,19 @@ If you had collaborators working with you on this pull request, please follow th
 for attributing co-contributors in place of this text (or remove this block completely if you are the only
 one submitting this work)
 
-<!--
+# Useful Links - Please Remove From Here Down Prior To Submission
+
+Please remove this entire Use Links section prior to submission
+
+## Issues
+
 For pull requests which relate to or close an issue, please include them below.
 Please review [Github's guidance on linking issues to pull requests](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue).
 
 For example having the text: "closes #1234" without quotes, would connect the current pull
 request to issue 1234.  And when we merge the pull request, Github will automatically close the issue.
+
+## Collaboration Attribution
 
 For Pull Requests that are the work of multiple collaborators, please follow the accepted
 method for including references to co-contributors, though note that according to this accepted
@@ -58,4 +65,3 @@ standard, there is a still a primary author.
 
 Please review [GitHub Co-Author Attribution](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors)
 
--->
