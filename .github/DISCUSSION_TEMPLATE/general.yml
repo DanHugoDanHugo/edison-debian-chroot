@@ -15,6 +15,7 @@ body:
 
         These are our overall policies for our Foundation and its volunteer members and contributors.
 
+
   - type: input
     attributes:
       label: Other GitHub identities I work as for examples
@@ -49,14 +50,12 @@ body:
       value: |
         ## My Interest Areas
         
-        Most Initiatives and Projects are made up of several components, only
-        some of which are *code*. If you are a coder (javascript, python, rust, sql, etc),
-        that is great, but not required at all. We do use GitHub for initiative and component
-        project management, so a willingness to interact with GitHub (as you are doing now) is
-        a bare minimum… 
+        Most Initiatives and Projects are made up of several components, only some of which are *code*. If you are a coder (javascript,
+        python, rust, sql, etc), that is great, but not required at all. We do use GitHub for initiative and component project management,
+        so a willingness to interact with GitHub (as you are doing now) is a bare minimum… 
 
-        **Note**: Our Whole Team approach means *Management* roles and responsibilities are shared,
-        but it is always helpful to have at least one person keeping track of the details.
+        **Note**: Our Whole Team approach means *Management* roles and responsibilities are shared, but it is always helpful to have at
+        least one person keeping track of the details.
 
   - type: checkboxes
     attributes:
@@ -84,3 +83,13 @@ body:
     validations:
       required: true
 
+  - type: markdown
+    attributes:
+      value: |
+        The *Innovate for Vegas Foundation* is all volunteer, so it may take a moment to respond, and then there may
+        be some discussion, here in this discussion forum and/or via email, or if you would like to join in our
+        typically-weekly office hours online, etc.
+
+        Stay tuned, and thanks for your interest!
+
+        To be continued…
