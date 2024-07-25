@@ -5,18 +5,15 @@ body:
   - type: markdown
     attributes:
       value: |
-        I would like to join the Innovate for Vegas Foundation as a Civic Volunteer and
-        Contributor of Creative Works, bringing my time, effort, and expertise
-        to bear on various initiatives and endeavors aimed at continuing the Purpose
-        of the Foundation, *To Enable and Encourage Ideation, Innovation, and Implementation
-        to Make our Communities Better.*
+        I would like to join the Innovate for Vegas Foundation as a Civic Volunteer and Contributor of Creative Works, bringing my
+        time, effort, and expertise to bear on various initiatives and endeavors aimed at continuing the Purpose of the Foundation,
+        *To Enable and Encourage Ideation, Innovation, and Implementation to Make our Communities Better.*
 
         If you have not already, be sure and read over these:
         - [Code of Conduct - Innovate for Vegas Foundation](https://github.com/InnovateForVegas/.github/blob/main/CODE_OF_CONDUCT.md)
         - [Contributing - Innovate for Vegas Foundation](https://github.com/InnovateForVegas/.github/blob/main/CONTRIBUTING.md)
 
         These are our overall policies for our Foundation and its volunteer members and contributors.
-
 
   - type: input
     attributes:
