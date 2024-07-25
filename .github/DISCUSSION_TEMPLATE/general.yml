@@ -1,21 +1,34 @@
-title: "Join our Org"
+title: "I would like to join!"
 labels:
   - triage
 body:
   - type: markdown
     attributes:
       value: |
-        I would like to join the Innovate for Vegas Foundation as a Civic Volunteer
+        I would like to join the Innovate for Vegas Foundation as a Civic Volunteer and
         Contributor of Creative Works, bringing my time, effort, and expertise
         to bear on various initiatives and endeavors aimed at continuing the Purpose
         of the Foundation, *To Enable and Encourage Ideation, Innovation, and Implementation
         to Make our Communities Better.*
 
-  - type: textarea
-    id: 
+        If you have not already, be sure and read over these:
+        - [Code of Conduct - Innovate for Vegas Foundation](https://github.com/InnovateForVegas/.github/blob/main/CODE_OF_CONDUCT.md)
+        - [Contributing - Innovate for Vegas Foundation](https://github.com/InnovateForVegas/.github/blob/main/CONTRIBUTING.md)
+
+        These are our overall policies for our Foundation and its volunteer members and contributors.
+
+
+  - type: input
     attributes:
-      label: Top 3 improvements
-      description: "What are the top 3 improvements we could make to this project?"
+      label: Other GitHub identities I work as for examples
+      description: You may join our org with a particular GitHub username if you like
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Top 3 Projects or Links
+      description: "Some other things I work on, where to learn more about me…"
       value: |
         1.
         2.
@@ -24,38 +37,53 @@ body:
       render: bash
     validations:
       required: true
-  - type: markdown
-    attributes:
-      value: |
-        ## Markdown header
-        And some more markdown
-  - type: input
-    id: has-id
-    attributes:
-      label: Suggestions
-      description: A description about suggestions to help you
-    validations:
-      required: true
-  - type: dropdown
-    id: download
-    attributes:
-      label: Which area of this project could be most improved?
-      options:
-        - Documentation
-        - Pull request review time
-        - Bug fix time
-        - Release cadence
-    validations:
-      required: true
+
   - type: checkboxes
     attributes:
-      label: Check that box!
+      label: I have read and agree to comply with the following
       options:
-        - label: This one!
+        - label: Organization Code of Conduct
           required: true
-        - label: I won't stop you if you check this one, too
+        - label: Organization Contributing policies
+          required: true
+
   - type: markdown
     attributes:
       value: |
-        ### The thrilling conclusion
-        _to our template_
+        ## My Interest Areas
+        
+        Most Initiatives and Projects are made up of several components, only
+        some of which are *code*. If you are a coder (javascript, python, rust, sql, etc),
+        that is great, but not required at all. We do use GitHub for initiative and component
+        project management, so a willingness to interact with GitHub (as you are doing now) is
+        a bare minimum… 
+
+        **Note**: Our Whole Team approach means *Management* roles and responsibilities are shared,
+        but it is always helpful to have at least one person keeping track of the details.
+
+  - type: checkboxes
+    attributes:
+      label: My Areas of Interest
+      options:
+        - label: Initiative and Project Management
+        - label: Graphic Arts
+        - label: Media Creation (Audio, Video, edits, etc)
+        - label: User Interface Design
+        - label: Copy Editing / Documentation
+        - label: Language Translation (i18n/l10n)
+        - label: Testing / QA
+        - label: Marketing
+        - label: Software Development
+        - label: Hardware Development
+        - label: Co-Creation (end-user collaboration)
+
+  - type: textarea
+    attributes:
+      label: Added detail about my Areas of Interest
+      description: "Getting specific about my areas of interest AND expertise…"
+      placeholder: |
+        Favorite languages, tools, creative media, spoken and written languages,
+        or anything else not hinted at with this checklist.
+    validations:
+      required: true
+
