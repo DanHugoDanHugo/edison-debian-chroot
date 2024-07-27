@@ -5,10 +5,129 @@ labels: ["story"]
 assignees:
   - DanHugoDanHugo
 body:
-  - type: checkboxes
-    id: reporter
+  - type: markdown
     attributes:
-      label: Reporter Contact and Attribution
+      value: |
+        # External Bug
+
+        An external User or Customer may encounter a problem using or testing
+        some element(s) of the Initiative in whatever form they have had access
+        to it. We presume that a Bug Report may be filed externally and in fact
+        completely outside of the GitHub user account universe, sent via email,
+        or some other means, so that it may be ingested and stored in an Initiative-level
+        *External Bug* before it can be triaged and split into actual Defects.
+
+        One presumption is, an external User or Customer may not be familiar with the
+        details of an Initiative, nor perhaps the specific Component Project to which a
+        problem should be ascribed, so this is left to the internal Triage process.
+
+        If at all possible, the original filer(s) of issues should be apprised of the
+        status of their reported findings as they are addressed, and there is a case
+        to be made for inclusion of filers of such reports as contributors to
+        all or part of the Initiative (at their opt-in of course).
+
+
+
+# This displayed list of User types should match the dropdown list below
+# Edit to match Agile User types for this initiative
+  - type: markdown
+    attributes:
+      value: |
+        User types *for this initiative*:
+        - **Organization Maintainer** responsible for a cohort of one or more people
+        - **Organization Member** is anyone considered to be a part of an organization
+        - **Project Maintainer** responsible for managing project(s)
+        - **Project Contributor** a person who is part of an organization contributing to project(s)
+        - **External Contributor** a person discovering projects
+        - **Casual User** a curious person checking stuff out
+        - **Automated User** a spider or other bot or similar
+        - **Catalog Maintainer** oversees the gathered data from remote orgs and projects
+        - **Spider Maintainer** oversees operation of the automation of gathering data from orgs and projects
+        - **Visualization Maintainer** integrates graph visualizations into other platform(s)
+        - **Notification Maintainer** manages integration of notifications with messaging tools and channels
+        - **Tessellation Contributor** works on Tessellation components in any capacity
+
+  - type: markdown
+    attributes:
+      value: |
+        **Please compose Conversation and Confirmation elements in the first person, as though you are the selected User.**
+      
+  - type: markdown
+    attributes:
+      value: "# Submitter/Reporter as User Type"
+
+  - type: dropdown
+    id: card
+    attributes:
+      label: As a …
+      description: Who are we getting a report from?
+# Options in this dropdown list should match the display list of User types above
+      options:
+        - Unknown
+        - Organization Maintainer
+        - Organization Member
+        - Project Maintainer
+        - Project Contributor
+        - External Contributor
+        - Casual User
+        - Automated User
+        - Catalog Maintainer
+        - Spider Maintainer
+        - Visualization Maintainer
+        - Notification Maintainer
+        - Tessellation Contributor
+      default: 0
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "# Detail"
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Short Description
+  
+        Brief Summary Description of the Reported Bug
+        
+  - type: textarea
+    id: shortdesc
+    attributes:
+      label: Short Description
+      description: Augments the issue title with an extended description
+
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Full Description (Report Body)
+
+        Actual Bug Report as submitted, as complete as possible, including a link
+        or other reference to the original report (if submitted via a public-facing
+        bug-report tool, etc)
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Full Description of the Reported Bug as Received
+      description: Augments the issue title with an extended description
+      placeholder: |
+        Original email, external bug form submission, etc.
+
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "## Bug Reporter Contact and Attribution"
+
+  - type: checkboxes
+    id: reporteropts
+    attributes:
+      label: Reporter Attribution
       description: Select and update all that apply
       options:
         - label: Contact Information Available 
@@ -17,81 +136,70 @@ body:
         - label: Attribution Information Available
         - label: Attribute Contribution(s) to Reporter
 
-  - type: markdown
+  - type: input
+    id: reportercontact
     attributes:
-      value: |
-        # The 3 Cs of Agile User Stories
-        
-        1. Select a User Card (imagine index cards, one color per user type).
-        2. Describe in Conversation what this User would like to accomplish, with context, addressing concerns such as What and Why.
-        3. Describe in simple list form (not checkboxes) Confirmation that we met those expectations.
-
-        A user story is a description of what to do, a task (issue) in a related repository will describe implementation of
-        a particular user story. Multiple tasks in multiple repositories may implement a user story or stories.
-        
-  - type: markdown
-    attributes:
-      value: |
-        User types for this project
-        - **Project Manager** responsible for multiple repositories
-        - **Repository Manager** responsible for one or few repositories
-        - **Project Contributor** part of the organization
-        - **External Contributor** not a part of the organization, discovering projects
-
-  - type: markdown
-    attributes:
-      value: |
-        Please compose Conversation and Confirmation elements in the first person, as though you are the User.
-      
-  - type: markdown
-    attributes:
-      value: "# Card"
-  - type: dropdown
-    id: card
-    attributes:
-      label: As a …
-      description: Who are we listening to?
-      options:
-        - Project Manager
-        - Repository Manager
-        - Project Contributor
-        - External Contributor
-      default: 0
-    validations:
-      required: true
-  - type: markdown
-    attributes:
-      value: "# Conversation"
-  - type: textarea
-    id: conversation
-    attributes:
-      label: … I want/need to …
-      description: What does the user want to accomplish?
-      placeholder: Background, Context, and Detail, optionally in list form
-    validations:
-      required: true
-  - type: markdown
-    attributes:
-      value: "# Confirmation"
-  - type: textarea
-    id: confirmation
-    attributes:
-      label: … so that …
-      placeholder: |
-        - A list
-        - of confirmable
-        - items
-      description: How do we determine we met expectations?
-    validations:
-      required: true
-  - type: markdown
-    attributes:
-      value: "# Notes"
-  - type: textarea
-    id: notes
-    attributes:
-      label: Non-story knowledge
-      description: Optional meta detail
-      placeholder: Useful information for planning and implementation, etc.
+      label: Reporter Contact
+      description: "Name, Email, etc as needed for opt-in follow-up and contribution attribution"
+      placeholder: "Example: John Doe<jdoe@example.com>"
     validations:
       required: false
+
+  - type: markdown
+    attributes:
+      value: "# Linked Issues"
+
+  - type: markdown
+    attributes:
+      value: |
+        Issues should be linked by url (see info for issue linking bottom of page) to indicate
+        graph relationship between them, with tags in a task list indicating the link relationship.
+        Identifying relationships between issues within the initiative hierarchy should
+        be easier than without this information.
+
+        Tags and Linked Issues
+        - defect: --> a Defect Issue in a Component Project repo derived from this External Bug Report
+        - feature: --> an Initiative Feature Issue derived from this External Bug report
+        - story: --> an Initiative Story Issue derived from this External Bug Report
+
+        External Bug issue(s) should be **Closed as Not Planned** after they are triaged and used to
+        link to existing and/or create new Initiative Feature or User Story issue(s) and/or Defect Issue(s)
+        in appropriate Component Project Repo(s).
+
+  - type: textarea
+    id: linking
+    attributes:
+      label: Linked Issues
+      description: "Tag entries with defect: , feature: , or story: "
+      placeholder: |
+        - [ ] defect: issue link to a related component project repo
+        - [ ] feature: issue link to a new or related initiative feature
+        - [ ] story: issue link to a new or related initiative user story
+
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        # Wrap-Up
+
+        Post-Bug-Triage comments, observations, notes
+
+  - type: textarea
+    id: wrapup
+    attributes:
+      label: Wrap-Up
+      description: To aid in iterative process improvement and learning
+      placeholder: |
+        Anything that may contribute to handling of other External Bug reports.
+
+    validations:
+      required: false
+
+  - type: markdown
+    attributes: 
+      value: |
+        ## Helpful Issue-filing Links
+        - [Linking to Issues and PRs across Repositories](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls#issues-and-pull-requests)
+
