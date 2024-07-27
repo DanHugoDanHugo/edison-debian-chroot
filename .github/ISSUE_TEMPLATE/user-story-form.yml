@@ -98,7 +98,7 @@ body:
   - type: textarea
     id: conversation
     attributes:
-      label: "**… I want/need to …**"
+      label: … I want/need to …
       description: What does the user hope to accomplish from their perspective?
       placeholder: Background, Context, and Detail, optionally in list form, the results of discussion and pondering…
     validations:
@@ -111,7 +111,7 @@ body:
   - type: textarea
     id: confirmation
     attributes:
-      label: "**… so that …**"
+      label: … so that …
       placeholder: |
         - A list
         - of confirmable items
@@ -162,12 +162,15 @@ body:
 
   - type: markdown
     attributes:
-      value: "# References"
+      value: |
+        # References
+
+        Links to external specs, documents, RFCs, accepted standards, examples, etc
         
   - type: textarea
     id: references
     attributes:
-      label: "**References** Links to external specs, documents, RFCs, accepted standards, examples, etc"
+      label: References
       description: Place useful information close for implementors to find…
       placeholder: |
         - Links to resources to aid in implementation of this User Story
@@ -180,12 +183,15 @@ body:
 
   - type: markdown
     attributes:
-      value: "# Notes"
+      value: |
+        # Notes
+
+        Non-story knowledge and insight
 
   - type: textarea
     id: notes
     attributes:
-      label: "**Notes** Non-story knowledge and insight"
+      label: Notes
       description: Optional meta detail
       placeholder: Useful information for planning and implementation, etc.
     validations:
@@ -193,18 +199,27 @@ body:
 
   - type: markdown
     attributes:
-      value: "# Wrap-Up"
+      value: |
+        # Wrap-Up
+        Post-Story comments, observations, notes.
 
   - type: textarea
     id: wrapup
     attributes:
-      label: "**Wrap-Up** Post-Story comments, observations, notes"
+      label: Wrap-Up
       description: To aid in iterative process improvement and learning
       placeholder: |
         Anything that may contribute to other User Stories and other Initiative effort.
 
     validations:
       required: false
+
+  - type: markdown
+    attributes: 
+      value: |
+        ## Helpful Issue-filing Links
+        - [Linking to Issues and PRs across Repositories](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls#issues-and-pull-requests)
+
 
   - type: markdown
     attributes: 
