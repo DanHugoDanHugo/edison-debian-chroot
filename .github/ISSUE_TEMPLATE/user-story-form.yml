@@ -16,10 +16,13 @@
 # along with ov-tessellation.  If not, see <https://www.gnu.org/licenses/>.
 
 name: User Story
-description: Agile User story as a component of project design and planning
+description: Agile User story for initiative design and planning
 title: "[User Story]: Edit title after colon"
-labels: ["story", "triage"]
-projects: ["danhugodanhugo/2"]
+labels:
+  - story
+  - triage
+projects:
+  - Project-ACT/2
 assignees:
   - DanHugoDanHugo
 body:
@@ -38,11 +41,11 @@ body:
         Multiple tasks in multiple repositories may implement a User Story or Stories.
 
 # This displayed list of User types should match the dropdown list below
-# Edit to match Agile User types for this project       
+# Edit to match Agile User types for this initiative 
   - type: markdown
     attributes:
       value: |
-        User types *for this project*:
+        User types *for this initiative*:
         - **Organization Maintainer** responsible for a cohort of one or more people
         - **Organization Member** is anyone considered to be a part of an organization
         - **Project Maintainer** responsible for managing project(s)
@@ -68,7 +71,7 @@ body:
   - type: dropdown
     id: card
     attributes:
-      label: As a …
+      label: "**As a …**"
       description: Who are we listening to?
 # Options in this dropdown list should match the display list of User types above
       options:
@@ -95,7 +98,7 @@ body:
   - type: textarea
     id: conversation
     attributes:
-      label: … I want/need to …
+      label: "**… I want/need to …**"
       description: What does the user hope to accomplish from their perspective?
       placeholder: Background, Context, and Detail, optionally in list form, the results of discussion and pondering…
     validations:
@@ -108,7 +111,7 @@ body:
   - type: textarea
     id: confirmation
     attributes:
-      label: … so that …
+      label: "**… so that …**"
       placeholder: |
         - A list
         - of confirmable items
@@ -131,14 +134,14 @@ body:
         be easier than without this information.
 
         Tags and Linked Issues
-        - feature: -> the parent Feature in this Agile hierarchy for this User Story
+        - feature: --> the parent Feature in this Agile hierarchy for this User Story
         - task: --> Implementation Task located in a separate repository
-        - merge-to: -> a User Story that is a merging of this and other User Stories
-        - merge-from: -> a User Story that was merged into this User Story
-        - split-to: -> a User Story that is one of multiple Themes derived from this User Stories
-        - split-from: -> a User Story that was split into this and other User Stories
-        - spike-to: -> a virtual User Story for planning and estimation of related User Stories
-        - spike-from: --> a real User Story connected to a virtual spike User Story
+        - merge-to: --> a User Story that is a merging of this and other User Stories
+        - merge-from: <-- a User Story that was merged into this User Story
+        - split-to: --> a User Story that is one of multiple User Stories derived from this User Story
+        - split-from: <-- a User Story that was split into this and other User Stories
+        - spike-to: --> a virtual User Story for planning and estimation of related User Stories
+        - spike-from: <-- a real User Story connected to a virtual spike User Story
 
         Merge-to and Split-to User Story issue(s) should be **Closed as Not Planned** in favor of the
         consolidated or expanded User Story issue(s), as appropriate. Do not delete, mark as merge
@@ -147,7 +150,7 @@ body:
   - type: textarea
     id: linking
     attributes:
-      label: Issues linked within the Project Overview Repository to this Theme issue
+      label: "**Linked Issues**"
       description: "Tag entries with epic: , task: , story: , merge-to: , split-from: , etc"
       placeholder: |
         - [ ] epic: issue link within overview
@@ -164,13 +167,13 @@ body:
   - type: textarea
     id: references
     attributes:
-      label: Links to external specs, documents, RFCs, accepted standards, examples, etc
+      label: "**References** Links to external specs, documents, RFCs, accepted standards, examples, etc"
       description: Place useful information close for implementors to find…
       placeholder: |
         - Links to resources to aid in implementation of this User Story
         - to External API Specifications, Accessibility Standards
         - to Verification/Certification tools
-        - to Similar features in other projects/platforms
+        - to Similar features in other Component Projects/Platforms
 
     validations:
       required: false
@@ -182,7 +185,7 @@ body:
   - type: textarea
     id: notes
     attributes:
-      label: Non-story knowledge and insight
+      label: "**Notes** Non-story knowledge and insight"
       description: Optional meta detail
       placeholder: Useful information for planning and implementation, etc.
     validations:
@@ -195,10 +198,10 @@ body:
   - type: textarea
     id: wrapup
     attributes:
-      label: Post-Story comments, observations, notes
+      label: "**Wrap-Up** Post-Story comments, observations, notes"
       description: To aid in iterative process improvement and learning
       placeholder: |
-        Anything that may contribute to other User Stories and other project effort.
+        Anything that may contribute to other User Stories and other Initiative effort.
 
     validations:
       required: false
