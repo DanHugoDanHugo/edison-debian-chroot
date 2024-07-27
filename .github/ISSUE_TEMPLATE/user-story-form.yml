@@ -47,18 +47,18 @@ body:
       label: User types *for this initiative*:
       description: You may select more than one.
       options:
-        - label: **Organization Maintainer** responsible for a cohort of one or more people
-        - label: **Organization Member** is anyone considered to be a part of an organization
-        - label: **Project Maintainer** responsible for managing project(s)
-        - label: **Project Contributor** a person who is part of an organization contributing to project(s)
-        - label: **External Contributor** a person discovering projects
-        - label: **Casual User** a curious person checking stuff out
-        - label: **Automated User** a spider or other bot or similar
-        - label: **Catalog Maintainer** oversees the gathered data from remote orgs and projects
-        - label: **Spider Maintainer** oversees operation of the automation of gathering data from orgs and projects
-        - label: **Visualization Maintainer** integrates graph visualizations into other platform(s)
-        - label: **Notification Maintainer** manages integration of notifications with messaging tools and channels
-        - label: **Tessellation Contributor** works on Tessellation components in any capacity
+        - label: "**Organization Maintainer** responsible for a cohort of one or more people"
+        - label: "**Organization Member** is anyone considered to be a part of an organization"
+        - label: "**Project Maintainer** responsible for managing project(s)"
+        - label: "**Project Contributor** a person who is part of an organization contributing to project(s)"
+        - label: "**External Contributor** a person discovering projects"
+        - label: "**Casual User** a curious person checking stuff out"
+        - label: "**Automated User** a spider or other bot or similar"
+        - label: "**Catalog Maintainer** oversees the gathered data from remote orgs and projects"
+        - label: "**Spider Maintainer** oversees operation of the automation of gathering data from orgs and projects"
+        - label: "**Visualization Maintainer** integrates graph visualizations into other platform(s)"
+        - label: "**Notification Maintainer** manages integration of notifications with messaging tools and channels"
+        - label: "**Tessellation Contributor** works on Tessellation components in any capacity"
 
   - type: markdown
     attributes:
