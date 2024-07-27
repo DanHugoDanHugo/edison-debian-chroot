@@ -37,12 +37,15 @@ body:
 
   - type: markdown
     attributes:
-      value: "# Feature Objective"
+      value: |
+        # Feature Objective
+
+        A general description of some behavior, interface, experience, etc.
         
   - type: textarea
     id: objective
     attributes:
-      label: A general description of some behavior, interface, experience, etc.
+      label: Objective
       description: To be described in specific detail with one or more User Stories…
       placeholder: A Feature might be an adjustable perpetual calendar, grouping more specific User Stories about month and year flipping, etc.
     validations:
@@ -50,12 +53,15 @@ body:
 
   - type: markdown
     attributes:
-      value: "# Key Results"
+      value: |
+        # Key Results
         
+        How we know we achieved Working Feature
+
   - type: textarea
     id: keyresults
     attributes:
-      label: How we know we achieved Working Feature
+      label: Key Results
       description: A container holding a group of goals…
       placeholder: |
         - [ ] A list of one or more measurable
@@ -66,7 +72,7 @@ body:
 
   - type: markdown
     attributes:
-      value: "# Intra-Overview Linked Issue(s)"
+      value: "# Linked Issues"
 
   - type: markdown
     attributes:
@@ -77,14 +83,14 @@ body:
         be easier than without this information.
 
         Tags and Linked Issues
-        - epic: -> a parent Epic in this Agile hierarchy for this Feature
-        - story: -> a child User Story in this Agile Hierarchy for this Feature
-        - merge-to: -> a Feature that is a merging of this and other Feature(s)
-        - merge-from: -> a Feature that was merged into this Features
-        - split-to: -> a Feature that is one of multiple Themes derived from this Features
-        - split-from: -> a Feature that was split into this and other Features
-        - spike-to: -> a virtual Feature for planning and estimation of related Features
-        - spike-from: --> a real Theme connected to a virtual spike Theme
+        - epic: --> a parent Epic in this Agile hierarchy for this Feature
+        - story: --> a child User Story in this Agile Hierarchy for this Feature
+        - merge-to: --> a Feature that is a merging of this and other Feature(s)
+        - merge-from: <-- a Feature that was merged into this Feature
+        - split-to: --> a Feature that is one of multiple Features derived from this Feature
+        - split-from: <-- a Feature that was split into this and other Features
+        - spike-to: --> a virtual Feature for planning and estimation of related Features
+        - spike-from: <-- a real Theme connected to a virtual spike Theme
 
         Merge-to and Split-to Feature issue(s) should be **Closed as Not Planned** in favor of the
         consolidated or expanded Feature issue(s), as appropriate. Do not delete, mark as merge
@@ -93,7 +99,7 @@ body:
   - type: textarea
     id: linking
     attributes:
-      label: Issues linked within the Project Overview Repository to this Theme issue
+      label: "**Linked Issues**"
       description: "Tag entries with eg epic: , story: , merge-to: , split-from: , etc"
       placeholder: |
         - [ ] epic: issue link within overview
@@ -105,33 +111,39 @@ body:
 
   - type: markdown
     attributes:
-      value: "# References"
+      value: |
+        # References
+
+        Links to external specs, documents, RFCs, accepted standards, examples, etc
         
   - type: textarea
     id: references
     attributes:
-      label: Links to external specs, documents, RFCs, accepted standards, examples, etc
+      label: References
       description: Place useful information close for implementors to find…
       placeholder: |
         - Links to resources to aid in implementation of User Stories attached to this Feature
         - to External API Specifications, Accessibility Standards
         - to Verification/Certification tools
-        - to Similar features in other projects/platforms
+        - to Similar features in other Component Projects/Platforms
 
     validations:
       required: false
 
   - type: markdown
     attributes:
-      value: "# Wrap-Up"
+      value: |
+        # Wrap-Up
+
+        Post-Feature comments, observations, notes
 
   - type: textarea
     id: wrapup
     attributes:
-      label: Post-Feature comments, observations, notes
+      label: Wrap-Up
       description: To aid in iterative process improvement and learning
       placeholder: |
-        Anything that may contribute to other Features and other project effort.
+        Anything that may contribute to other Features and other Initiative effort.
 
     validations:
       required: false
