@@ -42,9 +42,9 @@ body:
   - type: textarea
     id: objective
     attributes:
-      label: The Objective of this Epic, We aim to…
-      description: A focused goal for this phase of the timeline
-      placeholder: A brief description of what we aim to accomplished in this phase of the project Theme timeline
+      label: Objective
+      description: We Aim To… A focused goal for this phase of the timeline
+      placeholder: A brief description of what we aim to accomplished in this phase of the Initiative Theme timeline
     validations:
       required: true
 
@@ -55,7 +55,7 @@ body:
   - type: textarea
     id: keyresults
     attributes:
-      label: Key Results measuring Objective outcome…
+      label: Key Results
       description: A list of Key Results indicating success
       placeholder: |
         - [ ] A list of one or more measurable
@@ -66,7 +66,7 @@ body:
 
   - type: markdown
     attributes:
-      value: "# Intra-Overview Linked Issue(s)"
+      value: "# Linked Issues"
 
   - type: markdown
     attributes:
@@ -77,14 +77,14 @@ body:
         be easier than without this information.
 
         Tags and Linked Issues
-        - theme: -> the parent Theme in this Agile hierarchy for this Epic
-        - feature: -> a child Feature in this Agile hierarchy for this Epic
-        - merge-to: -> an Epic that is a merging of this and other Epic(s)
-        - merge-from: -> an Epic that was merged into this Epic
-        - split-to: -> an Epic that is one of multiple Themes derived from this Epic
-        - split-from: -> an Epic that was split into this and other Epics
-        - spike-to: -> a virtual Epic for planning and estimation of related Epics
-        - spike-from: --> a real Epic connected to a virtual spike Epic
+        - theme: --> the parent Theme in this Agile hierarchy for this Epic
+        - feature: --> a child Feature in this Agile hierarchy for this Epic
+        - merge-to: --> an Epic that is a merging of this and other Epic(s)
+        - merge-from: <-- an Epic that was merged into this Epic
+        - split-to: --> an Epic that is one of multiple Epics derived from this Epic
+        - split-from: <-- an Epic that was split into this and other Epics
+        - spike-to: --> a virtual Epic for planning and estimation of related Epics
+        - spike-from: <-- a real Epic connected to a virtual spike Epic
 
         Merge-to and Split-to Epic issue(s) should be **Closed as Not Planned** in favor of the
         consolidated or expanded Epic issue(s), as appropriate. Do not delete, mark as merge
@@ -93,7 +93,7 @@ body:
   - type: textarea
     id: linking
     attributes:
-      label: Issues linked within the Project Overview Repository to this Theme issue
+      label: Linked Issues
       description: "Tag entries with theme: , epic: , merge-to:, split-from:, etc"
       placeholder: |
         - [ ] theme: issue link within overview
@@ -105,33 +105,39 @@ body:
 
   - type: markdown
     attributes:
-      value: "# References"
+      value: |
+        # References
         
+        Links to external specs, documents, RFCs, accepted standards, examples, etc
+
   - type: textarea
     id: references
     attributes:
-      label: Links to external specs, documents, RFCs, accepted standards, examples, etc
+      label: References
       description: Place useful information close for implementors to find…
       placeholder: |
         - Links to resources to aid in implementation of Features attached to this Epic
         - to External API Specifications, Accessibility Standards
         - to Verification/Certification tools
-        - to Similar features in other projects/platforms
+        - to Similar features in other Component Projects/Platforms
 
     validations:
       required: false
 
   - type: markdown
     attributes:
-      value: "# Wrap-Up"
+      value: |
+        # Wrap-Up
+
+        Post-Epic comments, observations, notes
 
   - type: textarea
     id: wrapup
     attributes:
-      label: Post-Epic comments, observations, notes
+      label: Wrap-Up
       description: To aid in iterative process improvement and learning
       placeholder: |
-        Anything that may contribute to the next Epics and other project effort.
+        Anything that may contribute to the next Epics and other Initiative effort.
 
     validations:
       required: false
