@@ -93,7 +93,12 @@ body:
   
   - type: markdown
     attributes:
-      value: "# Conversation"
+      value: |
+        # Conversation
+
+        Typically this is literally a conversation regarding what a particular User
+        might want, need, or expect from a particular Feature, which this User Story
+        is describing.
 
   - type: textarea
     id: conversation
@@ -106,7 +111,12 @@ body:
 
   - type: markdown
     attributes:
-      value: "# Confirmation"
+      value: |
+        # Confirmation
+
+        When a Feature becomes available for a User, a particular User Type may determine that
+        the implementation is sufficient, close, or maybe not. Here we spell out specifics that
+        this User Type might have examine to make that determination.
 
   - type: textarea
     id: confirmation
@@ -203,6 +213,7 @@ body:
     attributes:
       value: |
         # Wrap-Up
+
         Post-Story comments, observations, notes.
 
   - type: textarea
@@ -215,13 +226,6 @@ body:
 
     validations:
       required: false
-
-  - type: markdown
-    attributes: 
-      value: |
-        ## Helpful Issue-filing Links
-        - [Linking to Issues and PRs across Repositories](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls#issues-and-pull-requests)
-
 
   - type: markdown
     attributes: 
