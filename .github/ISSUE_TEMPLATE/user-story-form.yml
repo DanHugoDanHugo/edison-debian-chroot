@@ -44,7 +44,7 @@ body:
 # Edit to match Agile User types for this initiative 
   - type: checkboxes
     attributes:
-      label: User types *for this initiative*:
+      label: "User types *for this initiative*:"
       description: You may select more than one.
       options:
         - label: "**Organization Maintainer** responsible for a cohort of one or more people"
