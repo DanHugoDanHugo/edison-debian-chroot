@@ -123,11 +123,13 @@ body:
 
   - type: markdown
     attributes:
-      value: "# Intra-Overview and Implementation Repository Linked Issue(s)"
+      value: "# Linked Issues"
 
   - type: markdown
     attributes:
       value: |
+        Intra-Overview and Implementation Project Repository Linked Issue(s)"
+
         Issues should be linked by url (see info for issue linking bottom of page) to indicate
         graph relationship between them, with tags in a task list indicating the link relationship.
         Identifying relationships between issues within the initiative hierarchy should
