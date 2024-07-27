@@ -71,7 +71,7 @@ body:
   - type: dropdown
     id: card
     attributes:
-      label: "__As a …__"
+      label: As a …
       description: Who are we listening to?
 # Options in this dropdown list should match the display list of User types above
       options:
@@ -150,7 +150,7 @@ body:
   - type: textarea
     id: linking
     attributes:
-      label: "**Linked Issues**"
+      label: Linked Issues
       description: "Tag entries with epic: , task: , story: , merge-to: , split-from: , etc"
       placeholder: |
         - [ ] epic: issue link within overview
