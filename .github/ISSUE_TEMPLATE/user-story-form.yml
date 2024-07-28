@@ -59,6 +59,8 @@ body:
         - label: "**Visualization Maintainer** integrates graph visualizations into other platform(s)"
         - label: "**Notification Maintainer** manages integration of notifications with messaging tools and channels"
         - label: "**Tessellation Contributor** works on Tessellation components in any capacity"
+    validations:
+      required: true
 
   - type: markdown
     attributes:
