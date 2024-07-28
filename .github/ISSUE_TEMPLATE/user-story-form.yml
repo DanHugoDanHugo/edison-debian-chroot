@@ -40,11 +40,18 @@ body:
         
         Multiple tasks in multiple repositories may implement a User Story or Stories.
 
-# This displayed list of User types should match the dropdown list below
-# Edit to match Agile User types for this initiative 
+  - type: markdown
+    attributes:
+      value: |
+        **Please compose Conversation and Confirmation elements in the first person, as though you are the selected User.**
+      
+  - type: markdown
+    attributes:
+      value: "# Card"
+
   - type: checkboxes
     attributes:
-      label: "User types *for this initiative*:"
+      label: As a…
       description: You may select more than one.
       options:
         - label: "**Organization Maintainer** responsible for a cohort of one or more people"
@@ -59,38 +66,6 @@ body:
         - label: "**Visualization Maintainer** integrates graph visualizations into other platform(s)"
         - label: "**Notification Maintainer** manages integration of notifications with messaging tools and channels"
         - label: "**Tessellation Contributor** works on Tessellation components in any capacity"
-    validations:
-      required: true
-
-  - type: markdown
-    attributes:
-      value: |
-        **Please compose Conversation and Confirmation elements in the first person, as though you are the selected User.**
-      
-  - type: markdown
-    attributes:
-      value: "# Card"
-
-  - type: dropdown
-    id: card
-    attributes:
-      label: As a …
-      description: Who are we listening to?
-# Options in this dropdown list should match the display list of User types above
-      options:
-        - Organization Maintainer
-        - Organization Member
-        - Project Maintainer
-        - Project Contributor
-        - External Contributor
-        - Casual User
-        - Automated User
-        - Catalog Maintainer
-        - Spider Maintainer
-        - Visualization Maintainer
-        - Notification Maintainer
-        - Tessellation Contributor
-      default: 0
     validations:
       required: true
   
