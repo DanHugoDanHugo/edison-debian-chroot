@@ -35,7 +35,7 @@ body:
         2. Describe in Conversation what this User would like to accomplish, with context, addressing concerns such as What and Why.
         3. Describe in simple list form (not checkboxes) Confirmation that we met those expectations as Acceptance Criteria.
 
-        A user story is a description of what to do in somewhat abstract form, a task (issue) in a *related repository* will describe
+        A User Story is a description of what to do in somewhat abstract form, a Story Task (issue) in a *related repository* will describe
         implementation of a particular User Story including Confirmation checks, which are essentially concrete **Key Results**.
         
         Multiple tasks in multiple repositories may implement a User Story or Stories.
@@ -49,10 +49,18 @@ body:
     attributes:
       value: "# Card"
 
+  - type: markdown
+    attributes:
+      value: |
+        A particular Feature may have some nuanced requirements or expectations based on the type of User, their role, etc.
+
+        Select any or all which apply to these particular facets of a Feature description, but keep in mind that there
+        is usually a difference that could be missed if we assume everyone will need or want the same things…
+
   - type: checkboxes
     attributes:
       label: As a…
-      description: You may select more than one.
+      description: For whom are we making, be deliberate when choosing more than one.
       options:
         - label: "**Organization Maintainer** responsible for a cohort of one or more people"
         - label: "**Organization Member** is anyone considered to be a part of an organization"
@@ -66,8 +74,6 @@ body:
         - label: "**Visualization Maintainer** integrates graph visualizations into other platform(s)"
         - label: "**Notification Maintainer** manages integration of notifications with messaging tools and channels"
         - label: "**Tessellation Contributor** works on Tessellation components in any capacity"
-    validations:
-      required: true
   
   - type: markdown
     attributes:
@@ -143,9 +149,9 @@ body:
       label: Linked Issues
       description: "Tag entries with epic: , task: , story: , merge-to: , split-from: , etc"
       placeholder: |
-        - [ ] epic: issue link within overview
-        - [ ] merge-to: this issue merges into a new issue
-        - [ ] split-from: this issue is one refactor from a parent Theme issue
+        - epic: issue link within overview
+        - merge-to: this issue merges into a new issue
+        - split-from: this issue is one refactor from a parent Theme issue
 
     validations:
       required: false
@@ -204,6 +210,13 @@ body:
 
     validations:
       required: false
+
+  - type: markdown
+    attributes: 
+      value: |
+        ## Helpful Issue-filing Links
+        - [Linking to Issues and PRs across Repositories](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls#issues-and-pull-requests)
+
 
   - type: markdown
     attributes: 
