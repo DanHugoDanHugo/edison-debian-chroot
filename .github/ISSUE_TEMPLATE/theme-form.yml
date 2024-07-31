@@ -109,6 +109,24 @@ body:
   - type: markdown
     attributes:
       value: |
+        ## Issue Graph
+
+        A visualization of Linked Issues, updated programmatically, please leave as is.
+
+  - type: textinput
+    attributes:
+      id: issuegraph
+      value: |
+        classDiagram
+          direction TB
+          class Theme {
+            Coming : Soon
+          }
+      render: mermaid
+
+  - type: markdown
+    attributes:
+      value: |
         # References
 
         Links to external specs, documents, RFCs, accepted standards, examples, etc"
