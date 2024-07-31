@@ -111,11 +111,15 @@ body:
       value: |
         ## Issue Graph
 
-        A visualization of Linked Issues, updated programmatically, please leave as is.
+        A visualization of Linked Issues as indicated above, updated programmatically, please leave as is.
+
+        AS issues are linked or removed, the visualization can be updated via automation.
 
   - type: textarea
     attributes:
       id: issuegraph
+      label: Issue Graph
+      description: Do not edit, will update via automation
       value: |
         classDiagram
           direction TB
