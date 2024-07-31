@@ -113,7 +113,7 @@ body:
 
         A visualization of Linked Issues, updated programmatically, please leave as is.
 
-  - type: textinput
+  - type: textarea
     attributes:
       id: issuegraph
       value: |
