@@ -6,6 +6,7 @@ assignees:
   - DanHugoDanHugo
 body:
   - type: markdown
+    id: test0
     attributes:
       value: |
         # External Bug
