@@ -5,6 +5,7 @@ title: "[User Story]: "
 labels: ["story"]
 assignees:
   - DanHugoDanHugo
+custom: value
 body:
   - type: markdown
     id: test0
