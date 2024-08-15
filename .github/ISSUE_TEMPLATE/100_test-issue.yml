@@ -1,6 +1,4 @@
 ---
-custom: value
----
 name: Test User Story
 description: Agile User story.
 title: "[User Story]: "
@@ -206,4 +204,6 @@ body:
       value: |
         ## Helpful Issue-filing Links
         - [Linking to Issues and PRs across Repositories](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls#issues-and-pull-requests)
-
+---
+custom: value
+---
