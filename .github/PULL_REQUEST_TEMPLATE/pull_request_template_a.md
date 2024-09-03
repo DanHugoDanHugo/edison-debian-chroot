@@ -66,4 +66,6 @@ method for including references to co-contributors, though note that according t
 standard, there is a still a primary author.
 
 Please review [GitHub Co-Author Attribution](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors)
-
+---
+version: 1
+---
