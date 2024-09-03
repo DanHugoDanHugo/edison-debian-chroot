@@ -1,3 +1,6 @@
+---
+version: 1
+---
 <!--
  Copyright (C) 2024 Innovate for Vegas Foundation
  
@@ -16,11 +19,6 @@
  You should have received a copy of the GNU General Public License
  along with doc-agile-for-volunteers.  If not, see <https://www.gnu.org/licenses/>.
 -->
-
----
-version: 1
----
-
 # Overview Translation Pull Request
 
 Check all that apply
