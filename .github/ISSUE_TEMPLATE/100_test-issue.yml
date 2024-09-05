@@ -33,6 +33,7 @@ body:
 # This displayed list of User types should match the dropdown list below
 # Edit to match Agile User types for this initiative
   - type: markdown
+    id: test1
     attributes:
       value: |
         User types *for this initiative*:
