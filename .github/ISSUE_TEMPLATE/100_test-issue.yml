@@ -178,7 +178,19 @@ body:
         - [ ] defect: issue link to a related component project repo
         - [ ] feature: issue link to a new or related initiative feature
         - [ ] story: issue link to a new or related initiative user story
+    validations:
+      required: false
 
+  - type: textarea
+    id: linkingttl
+    attributes:
+      label: Linked Issues
+      description: "Tag entries with :defect, :feature, or :story "
+      placeholder: |
+        :defect issue url to a related component project repo
+        :feature issue url to a new or related initiative feature
+        :story issue url to a new or related initiative user story
+      render: ttl
     validations:
       required: false
 
