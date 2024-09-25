@@ -154,9 +154,11 @@ body:
         label: Torque Estimates
         description: "Estimate effort and expertise per contributor (by github username)"
         placeholder: |
+          ```yaml
           UserName:
             effort: 0-100 (Integer)
             expertise: 0-10 (Decimal allowed)
+          ```
 
   - type: markdown
     attributes:
