@@ -1,3 +1,6 @@
+---
+field: value
+---
 Debian Unstable Chroot on Intel Edison
 ======================================
 
