@@ -149,7 +149,7 @@ body:
       required: false
 
   - type: textarea
-      id: torque_estimates
+      id: torque-estimates
       attributes:
         label: Torque Estimates
         description: "Estimate effort and expertise per contributor (by github username)"
