@@ -12,12 +12,7 @@ body:
       value: |
         # External Bug
 
-        An external User or Customer may encounter a problem using or testing
-        some element(s) of the Initiative in whatever form they have had access
-        to it. We presume that a Bug Report may be filed externally and in fact
-        completely outside of the GitHub user account universe, sent via email,
-        or some other means, so that it may be ingested and stored in an Initiative-level
-        *External Bug* before it can be triaged and split into actual Defects.
+        An external User or Customer may encounter a problem using or testing some element(s) of the Initiative in whatever form they have had access to it. We presume that a Bug Report may be filed externally and in fact completely outside of the GitHub user account universe, sent via email, or some other means, so that it may be ingested and stored in an Initiative-level *External Bug* before it can be triaged and split into actual Defects.
 
         One presumption is, an external User or Customer may not be familiar with the
         details of an Initiative, nor perhaps the specific Component Project to which a
