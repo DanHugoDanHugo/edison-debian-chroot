@@ -53,8 +53,18 @@ body:
   - type: markdown
     attributes:
       value: |
+        ***
+
+  - type: markdown
+    attributes:
+      value: |
         **Please compose Conversation and Confirmation elements in the first person, as though you are the selected User.**
-      
+
+  - type: markdown
+    attributes:
+      value: |
+        ***
+
   - type: markdown
     attributes:
       value: "# Submitter/Reporter as User Type"
