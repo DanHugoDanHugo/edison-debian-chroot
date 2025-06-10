@@ -183,20 +183,16 @@ body:
       required: false
 
   - type: markdown
-    attributes: 
-      value: |
-        ## Helpful Issue-filing Links
-        - [Linking to Issues and PRs across Repositories](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls#issues-and-pull-requests)
-
-
-  - type: markdown
     attributes:
       value: "## Issue Linking"
 
   - type: markdown
     attributes:
       value: |
-        Issues should be linked by url (see info for issue linking bottom of page) to indicate
+        GitHub Reference
+        - [Linking to Issues and PRs across Repositories](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls#issues-and-pull-requests)
+
+        Issues should be linked by url to indicate
         graph relationship between them, with tags in a task list indicating the link relationship.
         Identifying relationships between issues within the initiative hierarchy should
         be easier than without this information.
