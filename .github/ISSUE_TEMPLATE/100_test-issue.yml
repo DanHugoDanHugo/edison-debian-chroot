@@ -164,28 +164,6 @@ body:
           effort: 0-100 (Integer)
           expertise: 0-10 (Decimal allowed)
         """
-
-  - type: markdown
-    attributes:
-      value: "# Linked Issues"
-
-  - type: markdown
-    attributes:
-      value: |
-        Issues should be linked by url (see info for issue linking bottom of page) to indicate
-        graph relationship between them, with tags in a task list indicating the link relationship.
-        Identifying relationships between issues within the initiative hierarchy should
-        be easier than without this information.
-
-        Tags and Linked Issues
-        - defect: --> a Defect Issue in a Component Project repo derived from this External Bug Report
-        - feature: --> an Initiative Feature Issue derived from this External Bug report
-        - story: --> an Initiative Story Issue derived from this External Bug Report
-
-        External Bug issue(s) should be **Closed as Not Planned** after they are triaged and used to
-        link to existing and/or create new Initiative Feature or User Story issue(s) and/or Defect Issue(s)
-        in appropriate Component Project Repo(s).
-
   - type: markdown
     attributes:
       value: |
@@ -210,9 +188,31 @@ body:
         ## Helpful Issue-filing Links
         - [Linking to Issues and PRs across Repositories](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls#issues-and-pull-requests)
 
+
   - type: markdown
     attributes:
-      value: # Issue Graph
+      value: "## Issue Linking"
+
+  - type: markdown
+    attributes:
+      value: |
+        Issues should be linked by url (see info for issue linking bottom of page) to indicate
+        graph relationship between them, with tags in a task list indicating the link relationship.
+        Identifying relationships between issues within the initiative hierarchy should
+        be easier than without this information.
+
+        Tags and Linked Issues
+        - defect: --> a Defect Issue in a Component Project repo derived from this External Bug Report
+        - feature: --> an Initiative Feature Issue derived from this External Bug report
+        - story: --> an Initiative Story Issue derived from this External Bug Report
+
+        External Bug issue(s) should be **Closed as Not Planned** after they are triaged and used to
+        link to existing and/or create new Initiative Feature or User Story issue(s) and/or Defect Issue(s)
+        in appropriate Component Project Repo(s).
+
+  - type: markdown
+    attributes:
+      value: "### Issue Graph"
 
   - type: textarea
     id: linkingttl
