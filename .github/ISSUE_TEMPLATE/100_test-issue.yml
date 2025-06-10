@@ -209,12 +209,12 @@ body:
 
   - type: markdown
     attributes:
-      value: "### Issue Graph Visualization"
+      value: "### Issue Links"
 
   - type: textarea
     id: issuegraph
     attributes:
-      label: Nodes
+      label: Directed Graph
       description: Do not edit, will update via automation
       value: |
         classDiagram
@@ -227,7 +227,7 @@ body:
   - type: textarea
     id: linkingttl
     attributes:
-      label: Linked Issues
+      label: Graph Description
       description: "Tag entries with :defect, :feature, or :story "
       placeholder: |
         :defect issue url to a related component project repo
