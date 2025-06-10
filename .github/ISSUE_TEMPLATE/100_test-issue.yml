@@ -186,31 +186,6 @@ body:
         link to existing and/or create new Initiative Feature or User Story issue(s) and/or Defect Issue(s)
         in appropriate Component Project Repo(s).
 
-  - type: textarea
-    id: linking
-    attributes:
-      label: Linked Issues
-      description: "Tag entries with defect: , feature: , or story: "
-      placeholder: |
-        - [ ] defect: issue link to a related component project repo
-        - [ ] feature: issue link to a new or related initiative feature
-        - [ ] story: issue link to a new or related initiative user story
-    validations:
-      required: false
-
-  - type: textarea
-    id: linkingttl
-    attributes:
-      label: Linked Issues
-      description: "Tag entries with :defect, :feature, or :story "
-      placeholder: |
-        :defect issue url to a related component project repo
-        :feature issue url to a new or related initiative feature
-        :story issue url to a new or related initiative user story
-      render: ttl
-    validations:
-      required: false
-
   - type: markdown
     attributes:
       value: |
@@ -234,9 +209,19 @@ body:
       value: |
         ## Helpful Issue-filing Links
         - [Linking to Issues and PRs across Repositories](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls#issues-and-pull-requests)
----
-custom: value
----
-:epic #16
-:theme #2
 
+  - type: markdown
+    attributes:
+      value: # Issue Graph
+
+  - type: textarea
+    id: linkingttl
+    attributes:
+      label: Linked Issues
+      description: "Tag entries with :defect, :feature, or :story "
+      placeholder: |
+        :defect issue url to a related component project repo
+        :feature issue url to a new or related initiative feature
+        :story issue url to a new or related initiative user story
+    validations:
+      required: false
