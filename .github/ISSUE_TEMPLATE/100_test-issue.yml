@@ -184,13 +184,14 @@ body:
 
   - type: markdown
     attributes:
-      value: "## Issue Linking"
+      value: "## Issue Graph"
 
   - type: markdown
     attributes:
       value: |
-        GitHub Reference
-        - [Linking to Issues and PRs across Repositories](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls#issues-and-pull-requests)
+        GitHub Issue Link Reference
+        
+        [Linking to Issues and PRs across Repositories](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls#issues-and-pull-requests)
 
         Issues should be linked by url to indicate
         graph relationship between them, with tags in a task list indicating the link relationship.
@@ -208,7 +209,20 @@ body:
 
   - type: markdown
     attributes:
-      value: "### Issue Graph"
+      value: "### Issue Graph Visualization"
+
+  - type: textarea
+    id: issuegraph
+    attributes:
+      label: Nodes
+      description: Do not edit, will update via automation
+      value: |
+        classDiagram
+          direction TB
+          class Story {
+            Coming : Soon
+          }
+      render: mermaid
 
   - type: textarea
     id: linkingttl
