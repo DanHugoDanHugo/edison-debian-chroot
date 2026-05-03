@@ -1,23 +1,19 @@
 ---
 field: value
 ---
-Debian Unstable Chroot on Intel Edison
-======================================
+# Debian Unstable Chroot on Intel Edison
 
 Based initially on the same-named pair of scripts from
 https://communities.intel.com/message/254727#254727
 
 Scripts were attached to that post by user hkratz
 
-
 Adapted to install debian unstable into a chroot in
 similar fashion
 
 Intel Edison(R) is a registered trademark of Intel Corporation.
 
-
-Installation
-============
+## Installation
 
 1. Update Edison Firmware Image from the latest image publication point,
 probably https://software.intel.com/en-us/iot/hardware/edison/downloads
@@ -41,8 +37,7 @@ mount /home/ -o nodev,remount
 chroot /home/root/debian /bin/bash
 ```
 
-Installing and Updating Debian Packages
-=======================================
+## Installing and Updating Debian Packages
 
 Once inside the chroot it is possible to update and install new packages using apt-get.
 
@@ -52,6 +47,8 @@ For example:
 apt-get update
 apt-get install python-pip
 ```
+
 ---
 field2: value2
 ---
+
